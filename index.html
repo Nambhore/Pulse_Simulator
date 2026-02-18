@@ -22,7 +22,7 @@ body {
 
 h1 {
     text-align: center;
-    margin: 0 0 25px 0;
+    margin: 5px 0 25px 0;
     font-size: 28px;
 }
 
@@ -70,23 +70,37 @@ ul {
 .image-row {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 30px;
     margin: 30px 0;
     flex-wrap: wrap;
 }
 
 .image-row img {
-    width: 100%;
     max-width: 400px;
+    width: 100%;
     height: auto;
     box-shadow: 0 0 8px rgba(0,0,0,0.08);
 }
-    
+
+.arrow {
+    font-size: 60px;
+    font-weight: bold;
+    color: red;
+}    
 
 .center-img {
     text-align: center;
-    margin: 5px 0 0 0;
+    margin: 0;
 }
+
+.logo {
+    height: 140px;   /* increase size here */
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+    
 
 .center-img img {
     max-width: 100%;
@@ -101,7 +115,7 @@ ul {
 
 <!-- COMPANY LOGO -->
 <div class="center-img">
-    <img src="images/logo.png" alt="Company Logo" style="max-height:250px;">
+    <img src="images/logo.png" alt="Company Logo" class="logo">
 </div>
 
 <h1>Pulse Simulator - User Guide</h1>
@@ -181,13 +195,21 @@ This relay provides trigger input to RPI to start simulation.
 
 <!-- LOGIN SCREEN IMAGE -->
 <div class="image-row">
+    
     <div>
         <img src="images/login_page.png" alt="Login Page Screenshot">
     </div>
+
+    <div class="arrow">
+        ➜
+    </div>
+
     <div>
         <img src="images/main_page.png" alt="Main Dashboard Screenshot">
     </div>
+
 </div>
+
 
 <p class="step">Step 5: Select Flow (LPH).</p>
 <p class="step">Step 6: Select Pulse Size (LPP).</p>
@@ -227,6 +249,7 @@ Mobile: 9860094624
 </body>
 
 </html>
+
 
 
 
