@@ -2,44 +2,68 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">    
 <title>Pulse Simulator - User Guide</title>
 
 <style>
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    font-size: 16px;   /* Global font size */
 }
 
+/* ===== MAIN CONTAINER ===== */
 .container {
-    width: 1100px;
-    margin: 10px auto;     /* small top space */
-    padding: 20px 40px;    /* reduce top padding */
+    max-width: 1100px;
+    width: 95%;
+    margin: 5px auto;      /* very small outer top margin */
+    padding: 10px 40px 20px 40px;  /* small top padding */
     background: white;
-    
-    
 }
 
+
+
+/* ===== COMPANY LOGO ===== */
+.logo-container {
+    text-align: center;
+    margin-top: 0px;      /* remove extra top */
+    margin-bottom: 5px;   /* small gap below logo */
+}
+
+
+.logo-container img {
+    height: 85px;
+    width: auto;
+}
+
+
+/* ===== HEADINGS ===== */
 h1 {
     text-align: center;
-    margin: 5px 0 25px 0;
-    font-size: 40px;
+    margin: 5px 0 20px 0;   /* 5px top gap only */
+    font-size: 38px;
 }
 
 h2 {
     margin-top: 45px;
     border-bottom: 1px solid #ddd;
     padding-bottom: 8px;
+    font-size: 24px;
 }
 
 h3 {
     margin-top: 25px;
+    font-size: 18px;
 }
 
+
+/* ===== TEXT ===== */
 p, li {
     line-height: 1.7;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 ul {
@@ -50,6 +74,59 @@ ul {
     margin-bottom: 8px;
 }
 
+
+/* ===== NORMAL CONTENT IMAGES (Pump, Pulse etc.) ===== */
+.content-image {
+    display: block;
+    margin: 25px auto;
+    max-width: 700px;
+    width: 100%;
+    height: auto;
+}
+
+
+/* ===== LOGIN + MAIN SIDE BY SIDE ===== */
+.image-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.image-row img {
+    width: 420px;
+    height: auto;
+}
+
+.arrow {
+    font-size: 55px;
+    color: red;
+}
+
+
+/* ===== QR IMAGES ===== */
+.center-img {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.center-img img {
+    max-width: 220px;
+    height: auto;
+}
+
+
+/* ===== NOTE BOX ===== */
+.note {
+    background: #f8f8f8;
+    padding: 12px;
+    border-left: 4px solid #333;
+    margin: 15px 0;
+}
+
+
+/* ===== FOOTER ===== */
 .footer {
     margin-top: 60px;
     text-align: center;
@@ -61,50 +138,8 @@ ul {
     font-weight: bold;
 }
 
-.note {
-    background: #f8f8f8;
-    padding: 12px;
-    border-left: 4px solid #333;
-    margin: 15px 0;
-}
-
-.image-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-    margin: 30px 0;
-}
-
-.image-row img {
-    width: 440px;   /* fixed size so they fit side by side */
-    height: auto;
-}
-
-.arrow {
-    font-size: 50px;
-    color: red;
-}
-    
-
-.center-img {
-    text-align: center;
-    margin: 0;
-}
-
-.logo {
-    height: 30px;   /* increase size here */
-    width: auto;
-    display: block;
-    margin: 0 auto;
-}
-    
-
-.center-img img {
-    max-width: 100%;
-    height: 500px;
-}
 </style>
+
 </head>
 
 <body>
@@ -112,8 +147,8 @@ ul {
 <div class="container">
 
 <!-- COMPANY LOGO -->
-<div class="center-img">
-    <img src="images/logo.png" alt="Company Logo" class="logo">
+<div class="logo-container">
+    <img src="images/logo.png" alt="Company Logo">
 </div>
 
 <h1>Pulse Simulator - User Guide</h1>
@@ -131,15 +166,17 @@ ul {
 <h3>Configuration Requirements on Controller:</h3>
 <ul>
 <li>Pump must be defined in GS Max Controller. This will operate Relay.</li>
+</ul>    
 <!-- OPTIONAL: Pump Configuration Image -->
 <div class="center-img">
-    <img src="images/pump_definition.png" alt="Pump Configuration">
-</div>    
+    <img src="images/pump_definition.png" class="content-image" alt="Pump Definition">
+</div>
+<ul>
 <li>Controller DI must be configured for pulse input.</li>
+</ul>    
 <div class="center-img">
-    <img src="images/pulse_input.png" alt="Pulse Input Configuration">
+    <img src="images/pulse_input.png" class="content-image" alt="Pulse Input">
 </div>    
-</ul>
 
 <div class="note">
 This relay provides trigger input to RPI to start simulation.
@@ -193,21 +230,14 @@ This relay provides trigger input to RPI to start simulation.
 
 <!-- LOGIN SCREEN IMAGE -->
 <div class="image-row">
-    
-    <div>
-        <img src="images/login_page.png" alt="Login Page Screenshot">
-    </div>
 
-    <div class="arrow">
-        ➜
-    </div>
+    <img src="images/login_page.png" alt="Login Page Screenshot">
 
-    <div>
-        <img src="images/main_page.png" alt="Main Dashboard Screenshot">
-    </div>
+    <div class="arrow">➜</div>
+
+    <img src="images/main_page.png" alt="Main Dashboard Screenshot">
 
 </div>
-
 
 <p class="step">Step 5: Select Flow (LPH).</p>
 <p class="step">Step 6: Select Pulse Size (LPP).</p>
@@ -247,6 +277,7 @@ Mobile: 9860094624
 </body>
 
 </html>
+
 
 
 
