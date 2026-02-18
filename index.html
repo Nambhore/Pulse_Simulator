@@ -67,6 +67,22 @@ ul {
     margin: 15px 0;
 }
 
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.image-row img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    box-shadow: 0 0 8px rgba(0,0,0,0.08);
+}
+    
+
 .center-img {
     text-align: center;
     margin: 5px 0 0 0;
@@ -164,13 +180,13 @@ This relay provides trigger input to RPI to start simulation.
 </ul>
 
 <!-- LOGIN SCREEN IMAGE -->
-<div class="center-img">
-    <img src="images/login_page.png" alt="Login Page Screenshot">
-</div>
-
-<!-- MAIN PAGE IMAGE -->
-<div class="center-img">
-    <img src="images/main_page.png" alt="Main Dashboard Screenshot">
+<div class="image-row">
+    <div>
+        <img src="images/login_page.png" alt="Login Page Screenshot">
+    </div>
+    <div>
+        <img src="images/main_page.png" alt="Main Dashboard Screenshot">
+    </div>
 </div>
 
 <p class="step">Step 5: Select Flow (LPH).</p>
@@ -211,6 +227,7 @@ Mobile: 9860094624
 </body>
 
 </html>
+
 
 
 
